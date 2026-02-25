@@ -1,0 +1,40 @@
+{
+  "name": "io.github.samdreamsmaker/uac-mcp-server",
+  "version": "1.0.4",
+  "description": "MCP server bridge for Unity API Communicator — control Unity Editor from AI agents. 200+ tools for GameObjects, Scenes, Assets, Materials, Prefabs, Terrain, Physics, Lighting, and more.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamDreamsMaker/unity-api-communicator-mcp"
+  },
+  "packages": [
+    {
+      "registry_name": "npm",
+      "name": "uac-mcp-server",
+      "version": "1.0.4",
+      "runtime": "node",
+      "runtime_arguments": [
+        "--experimental-vm-modules"
+      ],
+      "environment_variables": [
+        {
+          "name": "UAC_HOST",
+          "description": "Unity API Communicator host",
+          "required": false,
+          "default": "localhost"
+        },
+        {
+          "name": "UAC_PORT",
+          "description": "Unity API Communicator port",
+          "required": false,
+          "default": "7777"
+        },
+        {
+          "name": "UAC_TIMEOUT",
+          "description": "Request timeout in milliseconds",
+          "required": false,
+          "default": "10000"
+        }
+      ]
+    }
+  ]
+}

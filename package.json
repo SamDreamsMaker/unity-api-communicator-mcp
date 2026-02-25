@@ -1,0 +1,49 @@
+{
+  "name": "uac-mcp-server",
+  "mcpName": "io.github.samdreamsmaker/uac-mcp-server",
+  "version": "1.0.4",
+  "description": "MCP server bridge for Unity API Communicator — control Unity Editor from AI agents",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "uac-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  },
+  "keywords": [
+    "mcp",
+    "unity",
+    "api",
+    "bridge",
+    "ai",
+    "editor",
+    "automation",
+    "gamedev",
+    "rest",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamDreamsMaker/unity-api-communicator-mcp"
+  },
+  "homepage": "https://unity-api-communicator.com",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

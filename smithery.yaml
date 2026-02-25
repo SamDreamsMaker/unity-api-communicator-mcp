@@ -1,0 +1,22 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      unityHost:
+        type: string
+        default: "localhost"
+        description: "Unity API Communicator host"
+      unityPort:
+        type: number
+        default: 7777
+        description: "Unity API Communicator port"
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "uac-mcp-server@latest"],
+      env: {
+        UAC_HOST: config.unityHost || "localhost",
+        UAC_PORT: String(config.unityPort || 7777)
+      }
+    })
